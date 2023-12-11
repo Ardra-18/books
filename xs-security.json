@@ -1,0 +1,32 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Viewer",
+      "description": "Risk Viewer"
+    },
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Risk Admin"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Viewer",
+      "description": "Risk Viewer",
+      "scope-references": [
+        "$XSAPPNAME.Viewer"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "Admin",
+      "description": "Risk Admin",
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "attributes": [],
+  "authorities-inheritance": false
+}
