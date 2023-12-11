@@ -1,9 +1,12 @@
 namespace books;
 using { Currency, managed, cuid } from '@sap/cds/common';
 
-entity Books : managed,cuid{
+entity Books : managed {
+  
+    key ID : Integer;
+    
     @title : 'Book Title'
-    key title : String;
+    title : String;
 
     @title : 'Description'
     descr : String;
@@ -12,15 +15,18 @@ entity Books : managed,cuid{
     stock : Integer;
 
     @title: 'Book Price'
-    price : Decimal;
+    price : Decimal(6,2);
 
     @title : 'Currency'
     currency : Currency;
 
     authors : Association to one Authors;
 }
-entity Authors : managed,cuid{
+entity Authors : managed{
+
+    key ID : Integer;
+
     @title : 'Author Name'
-    key name : String;
+     name : String;
 
 }
